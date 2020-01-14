@@ -33,10 +33,11 @@ fn two() {
     println!("at the end: result={}", result);
 }
 
+// Pattern matching with algebraic data types
 fn three() {
     let calculation = divide(10, 5);
 
-    let result = match calculation1 {
+    let result = match calculation {
         Some(2.0) => "Got 2".to_string(),
         Some(x @ 3.0) => format!("Got {}", x),
         Some(x @ 5.0..=10.0) => format!("Got {}!!!", x),
